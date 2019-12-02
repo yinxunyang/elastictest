@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestvike.portal.dao.SysAppDao">
+
+    <!--获取用户能进入的系统列表-->
+    <select id="authorityApps" parameterType="String" resultType="SysApp">
+        <![CDATA[
+			select * from sys_app sa
+			where exists (select 1 from sys_user_right where user_id = #{userId} and app_code = sa.app_code)
+			order by show_order, app_code
+		]]>
+    </select>
+
+</mapper>

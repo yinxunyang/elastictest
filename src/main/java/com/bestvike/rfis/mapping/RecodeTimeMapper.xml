@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestvike.rfis.dao.RecodeTimeDao">
+    <update id="updateRecode" parameterType="RecodeTime">
+        <![CDATA[
+		update RecodeTime set endExecuteTime = #{endExecuteTime},beforeTime = #{beforeTime}  where xh = #{xh}
+		]]>
+    </update>
+
+    <insert id="saveRecode" parameterType="RecodeTime">
+        <![CDATA[
+			insert into RecodeTime(xh,endExecuteTime,beforeTime) values (#{xh},#{endExecuteTime},#{beforeTime})
+		]]>
+    </insert>
+	<select id="selectRecodeTimeByLastTime" resultType="com.bestvike.rfis.data.RecodeTime">
+		SELECT * FROM (SELECT t.* FROM recodetime t ORDER BY t.endexecutetime DESC) WHERE rownum=1
+	</select>
+</mapper>

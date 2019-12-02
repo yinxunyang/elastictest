@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestvike.portal.dao.SysUserRightDao">
+
+    <insert id="insertSysUserRights" parameterType="Map">
+        <![CDATA[
+			insert into sys_user_right(right_id, user_id, role_id, app_code)
+			select $[@guid()], #{userId}, sr.role_id, sr.app_code
+			from sys_role sr
+			where sr.role_id
+		]]>
+        <foreach collection="roles" item="roleId" separator=", " open="in(" close=")">
+            <![CDATA[
+            	#{roleId}
+			]]>
+        </foreach>
+    </insert>
+
+	<select id="authorityRoles" parameterType="Map" resultType="SysRole">
+		<![CDATA[
+			SELECT * FROM SYS_ROLE T
+			WHERE EXISTS (SELECT 1 FROM SYS_USER_RIGHT WHERE APP_CODE = #{appCode} AND USER_ID = #{userId} AND ROLE_ID = T.ROLE_ID)
+		]]>
+	</select>
+</mapper>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestvike.rfis.dao.ArcProjectInfoDao">
+    <select id="queryArcProjectInfoByProjectNo" resultType="ArcProjectInfo">
+        <![CDATA[
+			select * from Arc_Projectinfo where projectNo = #{projectNo}
+		]]>
+    </select>
+</mapper>

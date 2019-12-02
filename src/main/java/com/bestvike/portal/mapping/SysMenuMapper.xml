@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestvike.portal.dao.SysMenuDao">
+
+    <select id="authorityMenus" parameterType="Map" resultType="SysMenu">
+        <![CDATA[
+            select distinct sm.*, srr.menu_operates as user_operates from sys_role_right srr
+            left join sys_menu sm
+            on srr.menu_id = sm.menu_id
+            where srr.app_code = #{appCode}
+            and srr.role_id in (select role_id from sys_user_right where user_id = #{userId} and app_code = #{appCode})
+            order by show_order
+		]]>
+    </select>
+
+	<!--获取用户对应的系统菜单-->
+	<select id="authorityBVMenus" parameterType="map" resultType="com.bestvike.portal.entity.DicMenuInfo">
+		<![CDATA[
+			select sm.menu_id, '01' module_no, sm.menu_name, sm.menu_address menu_link, sm.menu_icon, sm.menu_level, sm.parent_menu parent_menuId, 'Y' is_show, case when sm.menu_id is not null then 'Y' else 'N' end is_leaf,
+				sm.show_order dis_order, 'N' is_admin, srr.menu_operates as operate_Type from sys_role_right srr
+            left join sys_menu sm on srr.menu_id = sm.menu_id
+            where srr.app_code = #{appCode}
+            and srr.role_id in (select role_id from sys_user_right where user_id = #{userId} and app_code = #{appCode})
+            order by show_order
+		]]>
+	</select>
+</mapper>

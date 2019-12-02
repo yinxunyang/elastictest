@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestvike.portal.dao.SysUserDao">
+
+    <!--分页查询用户列表-->
+    <select id="pageSysUser" resultType="SysUser">
+        <![CDATA[
+            select su.user_id,
+                   su.user_alias,
+                   su.user_name,
+                   su.user_state,
+                   sa.area_name,
+                   sd.dept_name,
+                   sd.dept_id
+            from   sys_user su
+            left   join sys_area sa on su.area_code = sa.area_code
+            left   join sys_dept sd on su.dept_id = sd.dept_id
+        ]]>
+        <where>
+            <include refid="com.bestvike.commons.dao.AbstractDao.query"/>
+        </where>
+        <include refid="com.bestvike.commons.dao.AbstractDao.order"/>
+    </select>
+
+    <!--生成用户编号-->
+    <select id="selectId" resultType="Integer">
+        <![CDATA[
+            select nvl(max(user_id), 0) + 1 from sys_user
+        ]]>
+    </select>
+
+    <select id="selectId_mariadb" resultType="Integer">
+        <![CDATA[
+            select ifnull(max(user_id), 0) + 1 from sys_user
+        ]]>
+    </select>
+
+    <select id="selectOtherUserAlias" parameterType="Map" resultType="SysUser">
+        <![CDATA[
+            select * from sys_user where user_alias = #{userAlias} and user_id <> #{userId}
+        ]]>
+    </select>
+
+    <select id="getOneByUserId" parameterType="String" resultType="SysUser">
+        <![CDATA[
+            select * from sys_user where user_id = #{userId}
+        ]]>
+    </select>
+</mapper>

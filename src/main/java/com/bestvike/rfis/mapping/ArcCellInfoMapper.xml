@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestvike.rfis.dao.ArcCellInfoDao">
+
+    <select id="queryArcCellInfoByArcCellInfoMap" parameterType="map" resultType="ArcCellInfo">
+        <![CDATA[
+			select * from Arc_CellInfo  where bldNo = #{bldNo} and cellNo = #{cellNo}
+		]]>
+    </select>
+</mapper>

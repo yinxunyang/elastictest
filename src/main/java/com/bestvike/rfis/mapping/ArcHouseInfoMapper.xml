@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestvike.rfis.dao.ArcHouseInfoDao">
+    <select id="getHouseListByRegionNo" parameterType="ArcHouseInfo" resultType="ArcHouseInfo">
+        <![CDATA[
+			select sysGuid,balance,state,constructArea,address,cellNo,depositSign,skipNum,frozen,floorNo,mergeNum,houseProp,roomNo,isHistorical,showName from Arc_HouseInfo where bldNo = #{bldNo} and houseProp = #{houseProp} and state = '0' order by roomNo
+		]]>
+    </select>
+    <select id="getHouseBySysGuid" parameterType="String" resultType="ArcHouseInfo">
+        <![CDATA[
+			select * from Arc_HouseInfo where sysGuid = #{sysGuid}
+		]]>
+    </select>
+    <select id="qureyArcHouseInfoByMap" parameterType="map" resultType="ArcHouseInfo">
+        <![CDATA[
+			select t.* from Arc_HouseInfo t left join Con_HouseList a on a.contractNo = t.contractNo where t.contractNo = #{contractNo} and a.isMain = #{isMain}
+		]]>
+    </select>
+</mapper>

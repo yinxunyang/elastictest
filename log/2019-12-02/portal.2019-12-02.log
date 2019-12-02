@@ -1,0 +1,437 @@
+15:08:39.379 portal [main] INFO  com.bestvike.demo.DemoApplication - Starting DemoApplication on DESKTOP-LAFT8CB with PID 15368 (E:\testworkspace\demo2\out\production\classes started by y in E:\testworkspace\demo2)
+15:08:39.387 portal [main] DEBUG com.bestvike.demo.DemoApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+15:08:39.387 portal [main] INFO  com.bestvike.demo.DemoApplication - No active profile set, falling back to default profiles: default
+15:08:39.459 portal [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3ee37e5a: startup date [Mon Dec 02 15:08:39 CST 2019]; root of context hierarchy
+15:08:39.772 portal [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+15:08:40.634 portal [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+15:08:40.980 portal [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.bestvike.commons.extend.dao.ds3, com.bestvike.rfis.dao]' package. Please check your configuration.
+15:08:41.005 portal [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'rfisMybatisConfiguration.MyBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+15:08:41.396 portal [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$a8d701dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:41.508 portal [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e26b43ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:41.734 portal [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'security.oauth2.client-org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:41.739 portal [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration$$EnhancerBySpringCGLIB$$99b4ffae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:41.755 portal [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'resourceServerProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:42.114 portal [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 7003 (http)
+15:08:42.126 portal [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:08:42.127 portal [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+15:08:42.281 portal [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:08:42.281 portal [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2823 ms
+15:08:42.569 portal [localhost-startStop-1] ERROR o.s.b.c.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'customAuthenticationFilter' defined in file [E:\testworkspace\demo2\out\production\classes\com\bestvike\demo\security\base\CustomAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationManager' defined in class path resource [org/springframework/boot/autoconfigure/security/AuthenticationManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.authentication.AuthenticationManager]: Factory method 'authenticationManager' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customAuthenticationProvider': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bestvike.portal.security.base.CustomUserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+15:08:42.597 portal [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+15:08:42.605 portal [main] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+15:08:42.741 portal [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userDetailsService in com.bestvike.demo.security.base.CustomAuthenticationProvider required a bean of type 'com.bestvike.portal.security.base.CustomUserDetailsService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.bestvike.portal.security.base.CustomUserDetailsService' in your configuration.
+
+15:10:42.098 portal [main] INFO  com.bestvike.demo.DemoApplication - Starting DemoApplication on DESKTOP-LAFT8CB with PID 17424 (E:\testworkspace\demo2\out\production\classes started by y in E:\testworkspace\demo2)
+15:10:42.103 portal [main] DEBUG com.bestvike.demo.DemoApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+15:10:42.103 portal [main] INFO  com.bestvike.demo.DemoApplication - No active profile set, falling back to default profiles: default
+15:10:42.186 portal [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@71a8adcf: startup date [Mon Dec 02 15:10:42 CST 2019]; root of context hierarchy
+15:10:42.515 portal [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+15:10:42.578 portal [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.bestvike.demo.DemoApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'fileControllerForApp' for bean class [com.bestvike.portal.controller.app.FileControllerForApp] conflicts with existing, non-compatible bean definition of same name and class [com.bestvike.demo.controller.app.FileControllerForApp]
+15:10:42.631 portal [main] ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.bestvike.demo.DemoApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'fileControllerForApp' for bean class [com.bestvike.portal.controller.app.FileControllerForApp] conflicts with existing, non-compatible bean definition of same name and class [com.bestvike.demo.controller.app.FileControllerForApp]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:181)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:272)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:92)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.bestvike.demo.DemoApplication.main(DemoApplication.java:84)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'fileControllerForApp' for bean class [com.bestvike.portal.controller.app.FileControllerForApp] conflicts with existing, non-compatible bean definition of same name and class [com.bestvike.demo.controller.app.FileControllerForApp]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:345)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:283)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:135)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:287)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:167)
+	... 13 common frames omitted
+15:15:47.697 portal [main] INFO  com.bestvike.portal.Application - Starting Application on DESKTOP-LAFT8CB with PID 22344 (E:\testworkspace\demo2\out\production\classes started by y in E:\testworkspace\demo2)
+15:15:47.700 portal [main] DEBUG com.bestvike.portal.Application - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+15:15:47.700 portal [main] INFO  com.bestvike.portal.Application - No active profile set, falling back to default profiles: default
+15:15:47.764 portal [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51c668e3: startup date [Mon Dec 02 15:15:47 CST 2019]; root of context hierarchy
+15:15:47.923 portal [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+15:15:48.637 portal [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+15:15:48.852 portal [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'essMybatisConfiguration.MyBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+15:15:48.852 portal [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'frameMybatisConfiguration.MyBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+15:15:48.852 portal [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfiguration.MyBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+15:15:48.852 portal [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'rfisMybatisConfiguration.MyBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+15:15:49.180 portal [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$b92fb5e4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:15:49.275 portal [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f2c3f7b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:15:49.445 portal [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'security.oauth2.client-org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:15:49.450 portal [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration$$EnhancerBySpringCGLIB$$aa0db3b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:15:49.468 portal [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'resourceServerProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:15:49.747 portal [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 7003 (http)
+15:15:49.754 portal [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:15:49.755 portal [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+15:15:49.853 portal [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:15:49.853 portal [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2089 ms
+15:15:51.788 portal [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:15:51.788 portal [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+15:15:51.788 portal [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:15:51.788 portal [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:15:51.788 portal [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:15:51.789 portal [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+15:15:51.789 portal [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'customAuthenticationFilter' to: [/*]
+15:15:51.789 portal [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+15:15:51.829 portal [localhost-startStop-1] INFO  c.b.commons.config.ServiceAspect - service info
+15:15:51.849 portal [localhost-startStop-1] INFO  c.b.commons.config.ServiceAspect - {"method":"public java.util.List com.bestvike.portal.service.impl.ConfigServiceImpl.selectSysDict()","args":[]}
+15:15:52.107 portal [localhost-startStop-1] DEBUG c.b.portal.dao.SysDictDao.selectAll - ==>  Preparing: SELECT dict_id,dict_code,dict_show,dict_level,parent_id,parent_code,show_order,manage_time,manage_user,remark FROM sys_dict 
+15:15:52.162 portal [localhost-startStop-1] DEBUG c.b.portal.dao.SysDictDao.selectAll - ==> Parameters: 
+15:15:52.189 portal [localhost-startStop-1] DEBUG c.b.portal.dao.SysDictDao.selectAll - <==      Total: 17
+15:15:52.189 portal [localhost-startStop-1] INFO  c.b.commons.config.ServiceAspect - service result
+15:15:52.212 portal [localhost-startStop-1] INFO  c.b.commons.config.ServiceAspect - [{"dictId":"6010a06a18f44d64ad12531b2d23e265","dictCode":"isSolved","dictShow":"异常处理","dictLevel":null,"parentId":"ROOT","parentCode":null,"showOrder":4,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"948d1bbf180043109a6bf8aaa3b81801","dictCode":"0","dictShow":"未处理","dictLevel":null,"parentId":"6010a06a18f44d64ad12531b2d23e265","parentCode":"isSolved","showOrder":0,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"3cb7667f4451429cb44287a349a0b1a9","dictCode":"1","dictShow":"已处理","dictLevel":null,"parentId":"6010a06a18f44d64ad12531b2d23e265","parentCode":"isSolved","showOrder":2,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"0010080f46844063a3b87989903d8e1c","dictCode":"dataRange","dictShow":"数据权限","dictLevel":null,"parentId":"ROOT","parentCode":null,"showOrder":0,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"0427c39ed3bc442d8c4d541bc950b5cf","dictCode":"1000","dictShow":"本级及下级","dictLevel":null,"parentId":"0010080f46844063a3b87989903d8e1c","parentCode":"dataRange","showOrder":2,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"7e1f086cc6794e41bc9888ead3eaefed","dictCode":"0000","dictShow":"仅本级","dictLevel":null,"parentId":"0010080f46844063a3b87989903d8e1c","parentCode":"dataRange","showOrder":1,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"d450680e1a964ade938c0187e3f73db8","dictCode":"9999","dictShow":"全部","dictLevel":null,"parentId":"0010080f46844063a3b87989903d8e1c","parentCode":"dataRange","showOrder":3,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"690da3912d324d2a8a5e310958d1e8eb","dictCode":"roleState","dictShow":"角色状态","dictLevel":null,"parentId":"ROOT","parentCode":null,"showOrder":0,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"5a7be10ebe07464aaecb1a6b8fa3efda","dictCode":"0000","dictShow":"正常","dictLevel":null,"parentId":"690da3912d324d2a8a5e310958d1e8eb","parentCode":"roleState","showOrder":1,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"c9e7462c03c84917be8b394bf4ad33a2","dictCode":"9000","dictShow":"冻结","dictLevel":null,"parentId":"690da3912d324d2a8a5e310958d1e8eb","parentCode":"roleState","showOrder":2,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"97063c5d38914f7fbbac29204da5d512","dictCode":"0000","dictShow":"正常","dictLevel":null,"parentId":"c7e6a5a6c6ae4cd0815ba22a711f702d","parentCode":"userState","showOrder":0,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"c7e6a5a6c6ae4cd0815ba22a711f702d","dictCode":"userState","dictShow":"用户状态","dictLevel":null,"parentId":"ROOT","parentCode":null,"showOrder":0,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"4f0828f99a854dcfb2c20ef47e463977","dictCode":"dataState","dictShow":"数据状态","dictLevel":null,"parentId":"ROOT","parentCode":null,"showOrder":5,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"47140f84c65b4f9e987fa09ab4914ff2","dictCode":"normal","dictShow":"正常","dictLevel":null,"parentId":"4f0828f99a854dcfb2c20ef47e463977","parentCode":"dataState","showOrder":0,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"be67fcd896db48e4b1a01200741c4164","dictCode":"delete","dictShow":"删除","dictLevel":null,"parentId":"4f0828f99a854dcfb2c20ef47e463977","parentCode":"dataState","showOrder":1,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"a07e62fb05744915b10194da9a250b97","dictCode":"idType","dictShow":"证件类型","dictLevel":null,"parentId":"ROOT","parentCode":null,"showOrder":5,"manageTime":null,"manageUser":null,"remark":null},{"dictId":"26f7b760f9de4142a7de02afa57c639e","dictCode":"01","dictShow":"身份证","dictLevel":null,"parentId":"a07e62fb05744915b10194da9a250b97","parentCode":"idType","showOrder":0,"manageTime":null,"manageUser":null,"remark":null}]
+15:15:52.237 portal [localhost-startStop-1] DEBUG c.b.p.s.b.CustomAuthenticationFilter - Initializing filter 'customAuthenticationFilter'
+15:15:52.237 portal [localhost-startStop-1] DEBUG c.b.p.s.b.CustomAuthenticationFilter - Filter 'customAuthenticationFilter' configured successfully
+15:15:53.371 portal [main] INFO  c.b.portal.config.ThreadPoolFactory - -------初始化线程池------
+15:15:53.371 portal [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 
+15:15:54.811 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51c668e3: startup date [Mon Dec 02 15:15:47 CST 2019]; root of context hierarchy
+15:15:54.854 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/index],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.bestvike.bvch.controller.ZjbController.query(java.lang.Integer,java.lang.Integer,java.lang.String)
+15:15:54.854 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/indexCLF],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.bestvike.bvch.controller.ZjbController.queryCLF(java.lang.Integer,java.lang.Integer,java.lang.String)
+15:15:54.855 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/ess/allot],methods=[POST]}" onto public void com.bestvike.ess.controller.EssController.allot(java.lang.String,java.lang.String,java.lang.String)
+15:15:54.855 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/ess/import],methods=[POST]}" onto public void com.bestvike.ess.controller.EssController.upload(java.lang.String,javax.servlet.http.HttpServletRequest)
+15:15:54.856 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app/file/{fileId}],methods=[DELETE]}" onto public int com.bestvike.portal.controller.app.FileControllerForApp.delete(java.lang.String)
+15:15:54.856 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app/file/upload],methods=[POST]}" onto public com.bestvike.portal.data.LogFile com.bestvike.portal.controller.app.FileControllerForApp.upload(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+15:15:54.856 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app/file/formUpload],methods=[POST]}" onto public com.bestvike.portal.data.LogFile com.bestvike.portal.controller.app.FileControllerForApp.formUpload(java.lang.String,org.springframework.web.multipart.MultipartHttpServletRequest) throws java.io.IOException
+15:15:54.856 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app/file/{fileId}],methods=[GET]}" onto public void com.bestvike.portal.controller.app.FileControllerForApp.download(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String) throws java.io.IOException
+15:15:54.860 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/register],methods=[POST]}" onto public com.bestvike.portal.data.SysUserToken com.bestvike.portal.controller.AuthorityController.register(com.bestvike.portal.data.SysUser)
+15:15:54.860 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/identity],methods=[POST]}" onto public com.bestvike.portal.entity.User com.bestvike.portal.controller.AuthorityController.identity(java.security.Principal)
+15:15:54.861 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/check],methods=[GET]}" onto public com.bestvike.portal.entity.User com.bestvike.portal.controller.AuthorityController.check(java.security.Principal) throws java.io.IOException
+15:15:54.861 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.bestvike.portal.controller.AuthorityController.info(java.security.Principal)
+15:15:54.861 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/user],methods=[GET]}" onto public com.bestvike.portal.data.SysUser com.bestvike.portal.controller.AuthorityController.user(java.lang.String)
+15:15:54.861 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/generateCode]}" onto public void com.bestvike.portal.controller.AuthorityController.generateCode() throws java.io.IOException
+15:15:54.861 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/logout],methods=[POST]}" onto public void com.bestvike.portal.controller.AuthorityController.logout(java.security.Principal)
+15:15:54.861 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/apps],methods=[GET]}" onto public java.util.List<com.bestvike.portal.data.SysApp> com.bestvike.portal.controller.AuthorityController.apps()
+15:15:54.862 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/user],methods=[PUT]}" onto public int com.bestvike.portal.controller.AuthorityController.updateUser(com.bestvike.portal.data.SysUser)
+15:15:54.862 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/resetPassword],methods=[POST]}" onto public int com.bestvike.portal.controller.AuthorityController.resetPassword(com.bestvike.portal.data.SysUser) throws java.security.NoSuchAlgorithmException
+15:15:54.862 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/changePassword],methods=[POST]}" onto public int com.bestvike.portal.controller.AuthorityController.changePassword(com.bestvike.portal.data.SysUser)
+15:15:54.862 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/user/modify],methods=[PUT]}" onto public int com.bestvike.portal.controller.AuthorityController.modifyUser(com.bestvike.portal.data.SysUser)
+15:15:54.862 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/menus],methods=[GET]}" onto public java.util.List<com.bestvike.portal.data.SysMenu> com.bestvike.portal.controller.AuthorityController.selectMenus(java.lang.String)
+15:15:54.862 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/userRegister],methods=[POST]}" onto public com.bestvike.portal.data.SysUser com.bestvike.portal.controller.AuthorityController.registerUser(com.bestvike.portal.data.SysUser) throws java.security.NoSuchAlgorithmException
+15:15:54.862 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/role],methods=[POST]}" onto public int com.bestvike.portal.controller.AuthorityController.saveSysRole(com.bestvike.portal.data.SysRole)
+15:15:54.862 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/bvmenus],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.bestvike.portal.controller.AuthorityController.bvmenus(java.lang.String)
+15:15:54.863 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/menu/{menuId}],methods=[DELETE]}" onto public int com.bestvike.portal.controller.AuthorityController.deleteMenu(java.lang.String)
+15:15:54.863 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/appRoles],methods=[GET]}" onto public void com.bestvike.portal.controller.AuthorityController.appRoles(java.lang.String)
+15:15:54.863 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/login],methods=[POST]}" onto public com.bestvike.portal.entity.User com.bestvike.portal.controller.AuthorityController.login(com.bestvike.portal.entity.LoginParam,java.security.Principal)
+15:15:54.863 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/menus],methods=[GET]}" onto public java.util.List<com.bestvike.portal.data.SysMenu> com.bestvike.portal.controller.AuthorityController.menus(java.lang.String)
+15:15:54.863 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/menu],methods=[PUT]}" onto public int com.bestvike.portal.controller.AuthorityController.updateMenu(com.bestvike.portal.data.SysMenu)
+15:15:54.863 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/triggerMenu],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.bestvike.portal.controller.AuthorityController.triggerMenu(java.lang.String,java.lang.String,java.lang.String)
+15:15:54.863 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/user],methods=[POST]}" onto public int com.bestvike.portal.controller.AuthorityController.insertUser(com.bestvike.portal.data.SysUser) throws java.security.NoSuchAlgorithmException
+15:15:54.864 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/users],methods=[POST]}" onto public org.apache.ibatis.utils.PaginationList<com.bestvike.portal.data.SysUser> com.bestvike.portal.controller.AuthorityController.listUser(com.bestvike.commons.mybatis.QueryParam)
+15:15:54.864 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/menu],methods=[POST]}" onto public int com.bestvike.portal.controller.AuthorityController.insertMenu(com.bestvike.portal.data.SysMenu)
+15:15:54.864 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/roleRights],methods=[GET]}" onto public java.util.List<com.bestvike.portal.data.SysRoleRight> com.bestvike.portal.controller.AuthorityController.roleRights(java.lang.String)
+15:15:54.864 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/userRights],methods=[POST]}" onto public int com.bestvike.portal.controller.AuthorityController.updateUserRights(java.util.Map<java.lang.String, java.lang.Object>)
+15:15:54.864 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/roleRights],methods=[POST]}" onto public void com.bestvike.portal.controller.AuthorityController.updateRoleRights(java.util.Map<java.lang.String, java.lang.Object>)
+15:15:54.864 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/authority/userRights],methods=[GET]}" onto public java.util.Map<java.lang.String, java.util.List<com.bestvike.portal.data.SysRole>> com.bestvike.portal.controller.AuthorityController.userRights(java.lang.String)
+15:15:54.865 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/cache/dicts],methods=[GET]}" onto public java.util.Map<java.lang.String, java.util.List<com.bestvike.portal.data.SysDict>> com.bestvike.portal.controller.CacheController.saveSysDict()
+15:15:54.866 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/dict/{dictId}],methods=[DELETE]}" onto public int com.bestvike.portal.controller.ConfigController.deleteSysDict(java.lang.String)
+15:15:54.866 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/dict/save],methods=[POST]}" onto public int com.bestvike.portal.controller.ConfigController.saveSysDict(com.bestvike.portal.data.SysDict)
+15:15:54.866 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/catalog/save],methods=[POST]}" onto public int com.bestvike.portal.controller.ConfigController.saveSysCatalog(com.bestvike.portal.data.SysCatalog)
+15:15:54.866 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/dept/{deptId}],methods=[DELETE]}" onto public int com.bestvike.portal.controller.ConfigController.deleteSysDept(java.lang.String)
+15:15:54.866 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/area/{areaCode}],methods=[DELETE]}" onto public int com.bestvike.portal.controller.ConfigController.deleteSysArea(java.lang.String)
+15:15:54.866 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/dept/insert],methods=[POST]}" onto public int com.bestvike.portal.controller.ConfigController.insertSysDept(com.bestvike.portal.data.SysDept)
+15:15:54.867 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/dept/update],methods=[POST]}" onto public int com.bestvike.portal.controller.ConfigController.updateSysDept(com.bestvike.portal.data.SysDept)
+15:15:54.867 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/catalog/deleteByIds],methods=[POST]}" onto public int com.bestvike.portal.controller.ConfigController.deleteSysCatalog(com.bestvike.commons.mybatis.Entity)
+15:15:54.867 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/dept/selectByAreaCode],methods=[POST]}" onto public java.util.List<com.bestvike.portal.data.SysDept> com.bestvike.portal.controller.ConfigController.selectSysDeptByAreaCode(com.bestvike.portal.data.SysDept)
+15:15:54.867 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/demo/pageDemoTable],methods=[POST]}" onto public org.apache.ibatis.utils.PaginationList<com.bestvike.portal.data.DemoTable> com.bestvike.portal.controller.DemoController.pageDemoTable(com.bestvike.commons.mybatis.QueryParam)
+15:15:54.867 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/demo/demo1],methods=[GET]}" onto public java.lang.String com.bestvike.portal.controller.DemoController.demo1() throws java.io.UnsupportedEncodingException
+15:15:54.868 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/demo/demo2],methods=[POST]}" onto public java.util.Date com.bestvike.portal.controller.DemoController.demo2(java.util.Date)
+15:15:54.868 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/develop/encode],methods=[GET]}" onto public java.lang.String com.bestvike.portal.controller.DevelopController.encode(java.lang.String) throws java.security.NoSuchAlgorithmException
+15:15:54.868 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/develop/importTable],methods=[POST]}" onto public java.lang.String com.bestvike.portal.controller.DevelopController.importTable(com.bestvike.portal.data.LogFile) throws java.io.IOException,org.apache.poi.openxml4j.exceptions.InvalidFormatException,org.xml.sax.SAXException
+15:15:54.869 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/file/rotate],methods=[PUT]}" onto public com.bestvike.portal.data.LogFile com.bestvike.portal.controller.FileController.rotate(com.bestvike.portal.data.LogFile)
+15:15:54.869 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/file/template],methods=[GET]}" onto public void com.bestvike.portal.controller.FileController.template(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+15:15:54.869 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/file/upload],methods=[POST]}" onto public com.bestvike.portal.data.LogFile com.bestvike.portal.controller.FileController.upload(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+15:15:54.869 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/file/formUpload],methods=[POST]}" onto public com.bestvike.portal.data.LogFile com.bestvike.portal.controller.FileController.formUpload(org.springframework.web.multipart.MultipartFile) throws java.io.IOException
+15:15:54.869 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/thumb/{fileId}],methods=[GET]}" onto public void com.bestvike.portal.controller.FileController.thumbDownload(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+15:15:54.869 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/file/{fileId}],methods=[DELETE]}" onto public void com.bestvike.portal.controller.FileController.deleteFile(java.lang.String) throws java.io.IOException
+15:15:54.869 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/file/download],methods=[GET]}" onto public void com.bestvike.portal.controller.FileController.download1(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String) throws java.io.IOException
+15:15:54.869 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/file/crop],methods=[PUT]}" onto public com.bestvike.portal.data.LogFile com.bestvike.portal.controller.FileController.crop(com.bestvike.portal.data.LogFile)
+15:15:54.870 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/file/{fileId}],methods=[GET]}" onto public void com.bestvike.portal.controller.FileController.download2(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String) throws java.io.IOException
+15:15:54.870 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/file/updateShowName],methods=[PUT]}" onto public int com.bestvike.portal.controller.FileController.updateShowName(com.bestvike.portal.data.LogFile)
+15:15:54.870 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/pub/file/upload],methods=[POST]}" onto public com.bestvike.portal.data.LogFile com.bestvike.portal.controller.pub.FileControllerForPub.upload(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+15:15:54.870 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/pub/file/info/{fileId}],methods=[GET]}" onto public com.bestvike.portal.data.LogFile com.bestvike.portal.controller.pub.FileControllerForPub.fileInfo(java.lang.String)
+15:15:54.870 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/pub/file/{fileId}],methods=[GET]}" onto public void com.bestvike.portal.controller.pub.FileControllerForPub.download2(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String) throws java.io.IOException
+15:15:54.872 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/form/update],methods=[POST]}" onto public int com.bestvike.commons.controller.CommonController.update(com.bestvike.commons.mybatis.Entity)
+15:15:54.872 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/form/delete],methods=[POST]}" onto public int com.bestvike.commons.controller.CommonController.delete(com.bestvike.commons.mybatis.Entity)
+15:15:54.872 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/form/insert],methods=[POST]}" onto public int com.bestvike.commons.controller.CommonController.insert(com.bestvike.commons.mybatis.Entity)
+15:15:54.872 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/table/page],methods=[POST]}" onto public <T> org.apache.ibatis.utils.PaginationList<T> com.bestvike.commons.controller.CommonController.page(com.bestvike.commons.mybatis.QueryParam) throws java.lang.InterruptedException
+15:15:54.872 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/table/deletes],methods=[POST]}" onto public int com.bestvike.commons.controller.CommonController.deleteByIds(com.bestvike.commons.mybatis.Entity)
+15:15:54.872 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/auto/query],methods=[POST]}" onto public <T> java.util.List<T> com.bestvike.commons.controller.CommonController.queryForAuto(com.bestvike.commons.mybatis.QueryParam)
+15:15:54.873 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/auto/page],methods=[POST]}" onto public <T> org.apache.ibatis.utils.PaginationList<T> com.bestvike.commons.controller.CommonController.pageForAuto(com.bestvike.commons.mybatis.QueryParam)
+15:15:54.873 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/table/select],methods=[POST]}" onto public <T> java.util.List<T> com.bestvike.commons.controller.CommonController.selectForTable(com.bestvike.commons.mybatis.QueryParam)
+15:15:54.873 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/tree/query],methods=[POST]}" onto public <T> java.util.List<T> com.bestvike.commons.controller.CommonController.queryForTree(com.bestvike.commons.mybatis.QueryParam)
+15:15:54.873 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/select/init],methods=[POST]}" onto public <T> T com.bestvike.commons.controller.CommonController.initForSelect(com.bestvike.commons.mybatis.QueryParam)
+15:15:54.873 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/auto/init],methods=[POST]}" onto public <T> T com.bestvike.commons.controller.CommonController.initForAuto(com.bestvike.commons.mybatis.QueryParam)
+15:15:54.873 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/form/init],methods=[POST]}" onto public <T> T com.bestvike.commons.controller.CommonController.initForForm(com.bestvike.commons.mybatis.QueryParam)
+15:15:54.873 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/common/select/query],methods=[POST]}" onto public <T> java.util.List<T> com.bestvike.commons.controller.CommonController.queryForSelect(com.bestvike.commons.mybatis.QueryParam)
+15:15:54.874 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/excel/template],methods=[GET]}" onto public void com.bestvike.commons.controller.ExcelController.template(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+15:15:54.874 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/excel/upload],methods=[POST]}" onto public com.bestvike.commons.support.FileDetail com.bestvike.commons.controller.ExcelController.upload(java.lang.String,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+15:15:54.874 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/excel/download],methods=[GET]}" onto public void com.bestvike.commons.controller.ExcelController.download(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String) throws java.io.IOException
+15:15:54.875 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+15:15:54.876 portal [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:15:54.924 portal [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:15:54.924 portal [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:15:54.971 portal [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:15:56.269 portal [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:15:56.276 portal [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'connectionFactory' has been autodetected for JMX exposure
+15:15:56.280 portal [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'connectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=connectionFactory,type=CachingConnectionFactory]
+15:15:56.294 portal [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:15:56.304 portal [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+15:15:56.307 portal [pool-5-thread-1] INFO  c.b.commons.config.ServiceAspect - service info
+15:15:56.308 portal [pool-5-thread-1] INFO  c.b.commons.config.ServiceAspect - {"method":"public java.util.Map com.bestvike.bvch.service.impl.ZjbServiceImpl.fillData()","args":[]}
+15:15:56.311 portal [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7003"]
+15:15:56.313 portal [pool-5-thread-1] INFO  c.b.commons.config.ServiceAspect - service info
+15:15:56.314 portal [pool-5-thread-1] INFO  c.b.commons.config.ServiceAspect - {"method":"public com.bestvike.rfis.data.RecodeTime com.bestvike.bvch.service.impl.RecodeTimeServiceImpl.selectRecodeTimeByLastTime()","args":[]}
+15:15:56.318 portal [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7003"]
+15:15:56.327 portal [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:15:56.341 portal [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 7003 (http)
+15:15:56.345 portal [main] INFO  com.bestvike.portal.Application - Started Application in 9.065 seconds (JVM running for 9.879)
+15:15:56.466 portal [pool-5-thread-1] DEBUG c.b.r.d.R.selectRecodeTimeByLastTime - ==>  Preparing: SELECT * FROM (SELECT t.* FROM recodetime t ORDER BY t.endexecutetime DESC) WHERE rownum=1 
+15:15:56.466 portal [pool-5-thread-1] DEBUG c.b.r.d.R.selectRecodeTimeByLastTime - ==> Parameters: 
+15:15:56.466 portal [pool-5-thread-1] DEBUG c.b.r.d.R.selectRecodeTimeByLastTime - <==      Total: 0
+15:15:56.467 portal [pool-5-thread-1] INFO  c.b.commons.config.ServiceAspect - service result
+15:15:56.467 portal [pool-5-thread-1] INFO  c.b.commons.config.ServiceAspect - null
+15:15:56.485 portal [pool-5-thread-1] DEBUG c.b.r.d.C.queryConBaseInfoByTime - ==>  Preparing: SELECT t1.contractNo, t1.projectNo, t1.sysGuid, t1.contractType, t1.bldNo, t1.totalPrice, t1.payType, t1.signDate, t1.signTime, t1.recorddate, t1.recordtime, t1.signingPersonnelCertcode, t3.houseGuid FROM Con_BaseInfo t1 LEFT JOIN Con_HouseList t3 ON t1.contractno = t3.contractno LEFT JOIN Arc_HouseInfo t4 ON t3.houseguid = t4.sysguid WHERE t1.contractState = ? AND to_date(t1.recorddate||' '||t1.recordtime,'yyyy-mm-dd hh24:mi:ss') < to_date(?,'yyyy-mm-dd hh24:mi:ss') AND t1.isMergeTrade IS NULL AND t1.contractNo IS NOT NULL AND t3.isMain = ? AND t4.state = ? AND rownum <= ? ORDER BY t1.recorddate||t1.recordtime 
+15:15:56.490 portal [pool-5-thread-1] DEBUG c.b.r.d.C.queryConBaseInfoByTime - ==> Parameters: 3(String), 2019-12-02 15:10:56(String), Y(String), 0(String), 15000(Integer)
+15:15:57.845 portal [pool-5-thread-1] DEBUG c.b.r.d.C.queryConBaseInfoByTime - <==      Total: 9763
+15:15:57.845 portal [pool-5-thread-1] DEBUG c.b.r.dao.SequenceDao.generateLogId - ==>  Preparing: select lpad(seq_log_data_id.nextval, 10, '0') from dual 
+15:15:57.845 portal [pool-5-thread-1] DEBUG c.b.r.dao.SequenceDao.generateLogId - ==> Parameters: 
+15:15:57.853 portal [pool-5-thread-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+15:15:57.869 portal [pool-5-thread-1] INFO  o.s.j.support.SQLErrorCodesFactory - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+15:15:57.875 portal [pool-5-thread-1] ERROR c.b.b.s.i.TradeSequenceServiceImpl - 根据序列日志表的主键异常
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: ORA-02289: 序列不存在
+
+### The error may exist in file [E:\testworkspace\demo2\out\production\resources\com\bestvike\rfis\mapping\SequenceMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select lpad(seq_log_data_id.nextval, 10, '0') from dual
+### Cause: java.sql.SQLSyntaxErrorException: ORA-02289: 序列不存在
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-02289: 序列不存在
+
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:91)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:82)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy97.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:82)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy150.generateLogId(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy151.generateLogId(Unknown Source)
+	at com.bestvike.bvch.sequence.impl.TradeSequenceServiceImpl.generateLogId(TradeSequenceServiceImpl.java:49)
+	at com.bestvike.bvch.service.impl.ZjbServiceImpl.fillData(ZjbServiceImpl.java:182)
+	at com.bestvike.bvch.service.impl.ZjbServiceImpl$$FastClassBySpringCGLIB$$a4492b13.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.bestvike.bvch.service.impl.ZjbServiceImpl$$EnhancerBySpringCGLIB$$f1e7aef8.fillData(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-02289: 序列不存在
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:447)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:951)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:513)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:227)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:531)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:208)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:886)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1175)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1296)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3613)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3714)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1378)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.jdbc.pool.StatementFacade$StatementProxy.invoke(StatementFacade.java:114)
+	at com.sun.proxy.$Proxy124.execute(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy125.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:136)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 47 common frames omitted
+15:15:57.881 portal [pool-5-thread-1] ERROR c.b.bvch.service.impl.ZjbServiceImpl - 数据迁移失败
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: ORA-02289: 序列不存在
+
+### The error may exist in file [E:\testworkspace\demo2\out\production\resources\com\bestvike\rfis\mapping\SequenceMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select lpad(seq_log_data_id.nextval, 10, '0') from dual
+### Cause: java.sql.SQLSyntaxErrorException: ORA-02289: 序列不存在
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-02289: 序列不存在
+
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:91)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:82)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy97.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:82)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy150.generateLogId(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy151.generateLogId(Unknown Source)
+	at com.bestvike.bvch.sequence.impl.TradeSequenceServiceImpl.generateLogId(TradeSequenceServiceImpl.java:49)
+	at com.bestvike.bvch.service.impl.ZjbServiceImpl.fillData(ZjbServiceImpl.java:182)
+	at com.bestvike.bvch.service.impl.ZjbServiceImpl$$FastClassBySpringCGLIB$$a4492b13.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.bestvike.bvch.service.impl.ZjbServiceImpl$$EnhancerBySpringCGLIB$$f1e7aef8.fillData(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-02289: 序列不存在
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:447)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:951)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:513)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:227)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:531)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:208)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:886)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1175)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1296)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3613)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3714)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1378)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.jdbc.pool.StatementFacade$StatementProxy.invoke(StatementFacade.java:114)
+	at com.sun.proxy.$Proxy124.execute(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy125.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:136)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 47 common frames omitted
+15:15:57.882 portal [pool-5-thread-1] INFO  c.b.commons.config.ServiceAspect - service result
+15:15:57.882 portal [pool-5-thread-1] INFO  c.b.commons.config.ServiceAspect - {"success":"0","message":"数据迁移失败"}

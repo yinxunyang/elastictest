@@ -11,12 +11,6 @@ import java.util.Map;
  * @Date: 2019/9/12 8:46
  */
 public interface ITradeRecodeService {
-	/**
-	 * @Author: yinxunyang
-	 * @Description: 新增中间表
-	 * @Date: 2019/9/12 8:49
-	 */
-	void insertBatchTradeRecode(List<TradeRecord> tradeRecodeList);
 
 	/**
 	 * @Author: yinxunyang

@@ -22,17 +22,6 @@ public class TradeRecodeServiceImpl implements ITradeRecodeService {
 
 	/**
 	 * @Author: yinxunyang
-	 * @Description: 新增中间表
-	 * @Date: 2019/9/12 8:50
-	 */
-	@Override
-	@Transactional(rollbackFor = Exception.class)
-	public void insertBatchTradeRecode(List<TradeRecord> tradeRecodeList) {
-		tradeRecodeDao.insertBatchTradeRecode(tradeRecodeList);
-	}
-
-	/**
-	 * @Author: yinxunyang
 	 * @Description: 查询中间表
 	 * @Date: 2019/9/12 8:54
 	 */

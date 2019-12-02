@@ -1,9 +1,6 @@
 package com.bestvike.portal.entity;
 
-import com.bestvike.portal.data.SysApp;
-
 import java.io.Serializable;
-import java.util.List;
 
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -13,7 +10,6 @@ public class User implements Serializable {
     private String userName;
     private String isAdmin;
     private String authorities;
-    private List<SysApp> apps;
     private String clientId;
     private String clientSecret;
 
@@ -57,13 +53,6 @@ public class User implements Serializable {
         this.authorities = authorities;
     }
 
-    public List<SysApp> getApps() {
-        return apps;
-    }
-
-    public void setApps(List<SysApp> apps) {
-        this.apps = apps;
-    }
 
     public String getClientId() {
         return clientId;

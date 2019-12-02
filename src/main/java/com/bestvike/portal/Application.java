@@ -24,7 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
-@EnableRedisHttpSession
 //@EnableZuulProxy
 //@EnableEurekaClient
 @ComponentScan(basePackages = {"com.bestvike"})

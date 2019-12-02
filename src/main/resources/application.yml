@@ -75,8 +75,8 @@ security:
 spring:
   application:
     name: ${app.instance.code}-${app.instance.profile}
-#  session:
-#    store-type: none
+  session:
+    store-type: none
   redis:
     # cluster:
     #   nodes: 127.0.0.1:20001,127.0.0.1:20002,127.0.0.1:20003
